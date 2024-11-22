@@ -1,0 +1,33 @@
+Bagas akbar magriban
+065002400004
+
+def pangkat(base, power):
+    if power == 0:
+        return 1
+    elif power < 0:
+        return 1 / pangkat(base, -power)
+    else:
+        return base * pangkat(base, power - 1)
+
+def mulai_program():
+    print("\nIni adalah program pemangkatan negatif dan positif, tekan enter untuk berhenti.")
+    angka = input("Masukkan Angka: ")
+    if angka == "":
+        print("Terimakasih Banyak!")
+        return
+    
+    pangkatnya = input("Masukkan Pangkat: ")
+    if pangkatnya == "":
+        print("Terimakasih Banyak!")
+        return
+    
+    try:
+        hasil = pangkat(float(angka), int(pangkatnya))
+        print(f"Hasilnya adalah = {hasil}")
+    except ValueError:
+        print("Masukkan angka yang valid ya!")
+    
+    mulai_program()
+
+
+mulai_program()
