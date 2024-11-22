@@ -1,0 +1,14 @@
+#Bagas akbar magriban
+#065002400004
+
+
+def penjumlahan_ngawi(jumlah, i=1):
+    if jumlah <= 0:
+        return 0
+    else:
+        angka = float(input(f"Masukan bil ke-{i}: "))
+        return angka + penjumlahan_ngawi(jumlah - 1, i + 1)
+        
+mas_rusdi = float(input("mau berapa rek: "))
+nilai = penjumlahan_ngawi(mas_rusdi)
+print(f"Hasil: {nilai}")
